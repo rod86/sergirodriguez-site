@@ -10,6 +10,7 @@
         "bootstrap": "^4.0.0-beta.2",
         "jquery": "^3.2.1",
         "popper.js": "^1.12.5",
+        "font-awesome": "^4.7.0",
         "gulp": "^3.9.1",
         "gulp-concat": "^2.6.0",
         "gulp-css": "^0.1.0",
