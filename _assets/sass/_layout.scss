@@ -1,0 +1,120 @@
+body {
+    background: url("/assets/images/bg-chruch.png") repeat scroll center top transparent;
+}
+
+// Main menu
+$main-nav-font-family: 'BebasNeueRegular', Arial, sans-serif;
+$main-nav-font-size: 1.5rem;
+$main-nav-font-size-mobile: 1.7rem;
+$main-nav-link-color: #8C8C8C;
+$main-nav-link-color-hover: lighten($main-nav-link-color, 25%);
+$main-nav-link-color-active: $base-color;
+
+#header {
+    padding: 1rem 0;
+    margin-bottom: 0.8rem;
+
+    // Main menu
+    #mainNav ul {
+        font-family: $main-nav-font-family;
+        font-size: $main-nav-font-size-mobile;
+
+        li {
+            border-bottom: 1px dashed $base-color;
+
+            a {
+                color: $main-nav-link-color;
+                &:hover {
+                    color: $main-nav-link-color-hover;
+                }
+            }
+
+            &.active {
+                a, a:hover {
+                    color: $main-nav-link-color-active;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: $main-nav-font-size;
+
+            li {
+                 padding-right: 1em;
+                 border-bottom: none;
+
+                 &:last-child {
+                     padding-right: 0;
+                 }
+             }
+          }
+    }
+
+    // toggler button
+    .navbar-toggler {
+        border: none;
+
+        .navbar-toggler-icon {
+            width: 2em;
+            height: 2em;
+            color: $base-color;
+            background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$base-color}' stroke-width='3' stroke-linecap='rect' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+        }
+    }
+}
+
+#main-footer {
+    margin-top: 1.5rem;
+    border-top: 1px solid $base-color;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+
+    ul.social {
+        margin-bottom: 0.8rem;
+
+        li {
+            margin-left: 1rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            a i.fa {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    nav.footer-nav {
+        margin-bottom: 0.8rem;
+
+        ul {
+            margin-bottom: 0;
+
+            li {
+                margin-left: 1.3rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        ul.social li {
+            margin-left: 0.8rem;
+
+            a i.fa {
+                font-size: 1.5rem;
+            }
+        }
+
+        nav.footer-nav {
+            margin-bottom: 0;
+        }
+    }
+}

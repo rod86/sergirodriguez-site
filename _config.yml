@@ -1,0 +1,30 @@
+
+title: Sergi Rodriguez
+email: sergi86@gmail.com
+description: >
+  Web Developer specialized in PHP, MySQL, HTML5, CSS3 and Javascript.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:
+github_username:  rod86
+
+# Build settings
+source: _src
+destination: _build
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - _assets
+  - gulpfile.js
+  - .DS_Store
