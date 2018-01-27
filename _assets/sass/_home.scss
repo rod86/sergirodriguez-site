@@ -1,0 +1,54 @@
+$overlay-background-color: rgba(0,0,0,0.7);
+$overlay-button-color-hover: darken(theme-color(light), 10%);
+
+// about me
+#about-me {
+    background: url('http://sergirodriguez.net/uploads/royal_pavillion.jpg') no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 1.5rem;
+    @include box-shadow;
+
+    .overlay {
+        background-color: $overlay-background-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .overlay-inner {
+        padding: 50px 20px 0 20px;
+        color: #fff;
+
+        p {
+            font-size: 105%;
+        }
+        a.btn {
+            @include transition(color $transition-delay $transition-transition);
+            @include transition(border-color $transition-delay $transition-transition);
+
+            &:hover {
+                background: none;
+                color: $overlay-button-color-hover;
+                border-color: $overlay-button-color-hover;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .overlay {
+            width: 50%;
+        }
+        .overlay-inner {
+            padding-top: 65px;
+        }
+    }
+}
+
+#about-me,
+#featured-projects {
+    margin-bottom: 2.5rem;
+}

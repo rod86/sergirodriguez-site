@@ -1,0 +1,40 @@
+
+$base-color: #84AE2F;
+$font-family-base: 'PT Sans', Arial, sans-serif;
+
+$transition-transition: ease-in-out;
+$transition-delay: .3s;
+
+$box-shadow: 5px 5px 5px #888888;
+
+/*** BOOTSTRAP ***/
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$transition-base: all $transition-delay $transition-transition;
+
+// Theme
+$theme-colors: (
+    "primary": $base-color
+);
+
+// Body
+$body-color: #444444;
+
+// Headings
+$headings-font-family: 'Dosis', sans-serif;
+$headings-color: $base-color;
+$headings-margin-bottom: 0.5em;
+// $font-size-base: 1rem;
+//
+// $h1-font-size:                $font-size-base * 2.5 !default;
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
+
+// links
+$link-hover-color: lighten($base-color, 20%);

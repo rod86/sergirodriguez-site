@@ -1,0 +1,5 @@
+_build
+_src/js
+_src/css
+node_modules
+.DS_Store
