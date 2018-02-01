@@ -1,24 +1,20 @@
-<nav class="navbar navbar-expand-md navbar-light" id="header">
-    <a class="navbar-brand" href="#">
-        <img src="/assets/images/logo.png" alt="Sergi Rodriguez">
-    </a>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
+<button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ml-auto">
+        {% for menu_item in site.data.navigation.main -%}
+            {%- if menu_item.url == '/portfolio/' and page.collection == 'projects' %}
+                {% assign is_active = true %}
+            {%- elsif menu_item.url == page.url %}
+                {% assign is_active = true %}
+            {%- else %}
+                {% assign is_active = false %}
+            {%- endif -%}
+
+            <li class="nav-item {% if is_active %}active{% endif %}">
+                <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.title }}</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about-me">About Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+        {%- endfor %}
+    </ul>
+</div>

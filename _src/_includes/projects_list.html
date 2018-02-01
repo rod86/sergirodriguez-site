@@ -1,0 +1,39 @@
+
+<div class="projects-list">
+    <div class="card-deck">
+        {% for project in include.projects %}
+            <div class="card">
+                {% if project.image.src -%}
+                    <img src="{{ site.portfolio.images_dir }}{{ project.image.src }}" alt="{{ project.title }}" class="card-img-top">
+                {%- endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">
+                        <time class="project-date" datetime="{{ project.date|date:"%Y-%m-%d" }}">
+                            {{- project.date|date:"%B %Y" -}}
+                        </time>
+                        {% if project.company -%}
+                            <span class="project-company">Working at {{ project.company }}</span>
+                        {%- endif %}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ project.url }}" class="btn btn-primary" role="button">View</a>
+                </div>
+            </div>
+
+            <div class="w-100 d-block d-md-none"><!-- single clear --></div>
+
+            {%- assign mod2 = forloop.index|modulo: 2 %}
+            {% if mod2 == 0 -%}
+                <div class="w-100 d-none d-md-block d-xl-none"><!-- medium clear --></div>
+            {% endif -%}
+
+            {%- assign mod4 = forloop.index|modulo: 4 %}
+            {%- if mod4 == 0 -%}
+                <div class="w-100 d-none d-xl-block d-lg-block"><!-- large clear --></div>
+            {% endif -%}
+
+        {%- endfor %}
+    </div>
+</div>

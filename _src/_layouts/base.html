@@ -1,15 +1,31 @@
 <!doctype html>
 <html lang="en">
-    {% include header.html %}
+    {% include header.html -%}
     <body>
         <div class="container">
-            {% include main_menu.html %}
+            <header id="header">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/images/logo.png" alt="Sergi Rodriguez">
+                    </a>
+                    {% include main_menu.html -%}
+                </nav>
+            </header>
 
-            {{ content }}
+            {%- if page.title %}
+                <section id="page-header">
+                    <div class="row">
+                        <div class="col">
+                            <h1>{{ page.title }}</h1>
+                        </div>
+                    </div>
+                </section>
+            {% endif -%}
 
-            {% include footer.html %}
+            {{- content -}}
+
+            {%- include footer.html -%}
         </div>
-
         <script src="/js/scripts.min.js"></script>
     </body>
 </html>

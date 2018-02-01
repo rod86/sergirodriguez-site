@@ -1,6 +1,57 @@
-// Projects List
+// Projects Cards List
 
 .projects-list {
+    .card {
+        @include box-shadow;
+        border: none;
+        margin-bottom: $grid-gutter-width;
+
+        .card-body {
+            padding-bottom: 0.8rem;
+
+            .card-title {
+                margin-bottom: 0.5rem;
+            }
+
+            .card-text {
+                margin-bottom: 0;
+
+                .project-company, .project-date {
+                    display: block;
+                    font-size: 0.9rem;
+                }
+                .project-date {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .card-footer {
+            padding: 0;
+            text-align: right;
+            border: none;
+            background-color: #fff;
+
+            .btn {
+                padding: .4rem 1rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .card {
+            max-width: calc(50% - #{$grid-gutter-width});
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .card {
+            max-width: calc(25% - #{$grid-gutter-width});
+        }
+    }
+}
+
+.projects-list-OLD {
     & > div {
         margin: 0 auto;
 
