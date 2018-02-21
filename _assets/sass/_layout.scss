@@ -55,12 +55,10 @@ body {
 }
 
 #main-footer {
-    .container {
-        margin-top: 1.5rem;
-        border-top: 1px solid $base-color;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
-    }
+    margin-top: 1.5rem;
+    border-top: 1px solid $base-color;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
 
     ul.social {
         margin-bottom: 0.8rem;
@@ -98,12 +96,6 @@ body {
     }
 
     @include media-breakpoint-up(md) {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1030;
-
         ul.social li {
             margin-left: 0.8rem;
         }
