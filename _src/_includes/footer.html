@@ -1,42 +1,40 @@
-<footer id="main-footer" class="fixed-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <ul class="social list-inline list-unstyled">
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<footer id="main-footer">
+    <div class="row">
+        <div class="col">
+            <ul class="social list-inline list-unstyled">
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <nav class="footer-nav">
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <nav class="footer-nav">
 
-                    <ul class="list-inline list-unstyled">
-                        {% for menu_item in site.data.navigation.footer -%}
-                            <li class="list-inline-item">
-                                <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
-                            </li>
-                        {%- endfor %}
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-6 text-md-right">
-                <small class="text-muted">Designed by Sergi Rodriguez &copy; 2018</small>
-            </div>
+                <ul class="list-inline list-unstyled">
+                    {% for menu_item in site.data.navigation.footer -%}
+                        <li class="list-inline-item">
+                            <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
+                        </li>
+                    {%- endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-6 text-md-right">
+            <small class="text-muted">Designed by Sergi Rodriguez &copy; 2018</small>
         </div>
     </div>
 </footer>
