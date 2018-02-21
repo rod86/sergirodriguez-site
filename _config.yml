@@ -8,6 +8,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:  rod86
 
+permalink: pretty
+
 # Build settings
 source: _src
 destination: _build
@@ -28,3 +30,34 @@ exclude:
   - _assets
   - gulpfile.js
   - .DS_Store
+
+# do not delete files in _site folder
+keep_files:
+  - js
+  - css
+  - fonts
+
+# Collections
+collections:
+    projects:
+        output: true
+        collections_dir: _projects
+        permalink: /portfolio/project/:title/
+        layout: project
+
+# Frontmatter defaults
+defaults:
+    - scope:
+        path: ""
+        type: pages
+      values:
+          layout: page
+    - scope:
+        path: ""
+        type: projects
+      values:
+          layout: project
+
+# Portfolio config
+portfolio:
+    images_dir: /assets/images/portfolio/

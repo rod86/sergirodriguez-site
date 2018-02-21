@@ -6,13 +6,14 @@ var gulp    = require('gulp'),
     uglify  = require('gulp-uglify');
 
 var srcPath = './_assets',
-    buildPath = './_src',
+    buildPath = './_build',
     javascriptFiles = [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js'
     ];
 
+// Styles
 gulp.task('sass', function() {
     gulp.src(srcPath + '/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -21,6 +22,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(buildPath + '/css'));
 });
 
+// Javascript
 gulp.task('js', function () {
     return gulp.src(javascriptFiles)
         .pipe(concat('scripts.js'))
@@ -29,4 +31,15 @@ gulp.task('js', function () {
         .pipe(gulp.dest(buildPath + '/js'));
 });
 
-gulp.task('build', ['js', 'sass']);
+// Fonts
+gulp.task('fonts', function() {
+    return gulp.src('node_modules/font-awesome/fonts/*')
+        .pipe(gulp.dest(buildPath + '/fonts'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch([srcPath + '/sass/**/*.scss'], ['sass']);
+});
+
+gulp.task('build', ['js', 'sass', 'fonts']);
+gulp.task('default', ['build', 'watch']);

@@ -1,0 +1,40 @@
+---
+layout: base
+---
+
+<section class="project">
+    <div class="project-details">
+        <div class="project-info">
+            <div class="project-date">
+                <time datetime="{{ page.date|date:"%Y-%m-%d" }}">
+                    {{- page.date|date:"%B %Y" -}}
+                </time>
+            </div>
+            <div class="project-company">
+                {% if page.company %}
+                    Working at {{ page.company }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="project-content content">
+            {{ content }}
+        </div>
+    </div>
+    <div class="project-images">
+        {% if page.image.src %}
+            <img src="{{ site.portfolio.images_dir }}{{ page.image.src}}" alt="{{ page.title }}">
+        {% endif %}
+    </div>
+    <div class="project-buttons">
+        <div class="project-buttons-group">
+            <div class="project-url">
+                {% if page.project_url %}
+                    <a href="{{ page.project_url }}" class="btn btn-primary btn-lg" role="button" target="_blank">Visit site</a>
+                {% endif %}
+            </div>
+            <div class="back">
+                <a class="btn btn-link" href="/portfolio" role="button">Back to portfolio</a>
+            </div>
+        </div>
+    </div>
+</section>

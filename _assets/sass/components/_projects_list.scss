@@ -1,13 +1,6 @@
-// Projects List
+// Projects Cards List
 
 .projects-list {
-    & > div {
-        margin: 0 auto;
-
-        @include media-breakpoint-up(md) {
-            margin: 0;
-        }
-    }
     .card {
         @include box-shadow;
         border: none;
@@ -42,6 +35,18 @@
             .btn {
                 padding: .4rem 1rem;
             }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .card {
+            max-width: calc(50% - #{$grid-gutter-width});
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .card {
+            max-width: calc(25% - #{$grid-gutter-width});
         }
     }
 }

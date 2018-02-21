@@ -1,11 +1,32 @@
 
+/*** SITE ***/
+
+// Base
 $base-color: #84AE2F;
 $font-family-base: 'PT Sans', Arial, sans-serif;
+$body-background-image: "/assets/images/bg-chruch.png";
 
+// animation
 $transition-transition: ease-in-out;
 $transition-delay: .3s;
 
+// shadow
 $box-shadow: 5px 5px 5px #888888;
+
+// Main menu
+$main-nav-font-family: 'BebasNeueRegular', Arial, sans-serif;
+$main-nav-font-size: 1.5rem;
+$main-nav-font-size-mobile: 1.7rem;
+$main-nav-link-color: #8C8C8C;
+$main-nav-link-color-hover: lighten($main-nav-link-color, 25%);
+$main-nav-link-color-active: $base-color;
+
+// homepage
+$overlay-background-color: rgba(0,0,0,0.7);
+$overlay-button-color-hover: darken(#f8f9fa, 10%);
+$overlay-background-image: '/assets/images/royal_pavillion.jpg';
+$overlay-height: 300px;
+
 
 /*** BOOTSTRAP ***/
 
@@ -27,14 +48,6 @@ $body-color: #444444;
 $headings-font-family: 'Dosis', sans-serif;
 $headings-color: $base-color;
 $headings-margin-bottom: 0.5em;
-// $font-size-base: 1rem;
-//
-// $h1-font-size:                $font-size-base * 2.5 !default;
-// $h2-font-size:                $font-size-base * 2 !default;
-// $h3-font-size:                $font-size-base * 1.75 !default;
-// $h4-font-size:                $font-size-base * 1.5 !default;
-// $h5-font-size:                $font-size-base * 1.25 !default;
-// $h6-font-size:                $font-size-base !default;
 
 // links
 $link-hover-color: lighten($base-color, 20%);

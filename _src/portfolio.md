@@ -1,3 +1,4 @@
 ---
+title: Portfolio
 layout: portfolio
 ---
