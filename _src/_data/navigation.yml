@@ -7,3 +7,7 @@ main:
       url: /about-me/
     - title: Contact
       url: /contact/
+
+footer:
+    - title: Privacy
+      url: /privacy/

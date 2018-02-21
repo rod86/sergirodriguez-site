@@ -7,3 +7,20 @@ a {
         @include transition($btn-transition);
     }
 }
+
+// Lists
+.content ul, ul.list-styled {
+    list-style: none;
+
+    li {
+        &:before {
+            content: $fa-var-stop;
+            font-family: 'FontAwesome';
+            float: left;
+            margin-left: -1.5em;
+            color: $base-color;
+            font-size: .8rem;
+            padding-top: .2rem;
+        }
+    }
+}

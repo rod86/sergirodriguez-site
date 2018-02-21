@@ -1,14 +1,6 @@
 body {
-    background: url("/assets/images/bg-chruch.png") repeat scroll center top transparent;
+    background: url($body-background-image) repeat scroll center top transparent;
 }
-
-// Main menu
-$main-nav-font-family: 'BebasNeueRegular', Arial, sans-serif;
-$main-nav-font-size: 1.5rem;
-$main-nav-font-size-mobile: 1.7rem;
-$main-nav-link-color: #8C8C8C;
-$main-nav-link-color-hover: lighten($main-nav-link-color, 25%);
-$main-nav-link-color-active: $base-color;
 
 #header {
     padding: 1rem 0;
@@ -63,10 +55,12 @@ $main-nav-link-color-active: $base-color;
 }
 
 #main-footer {
-    margin-top: 1.5rem;
-    border-top: 1px solid $base-color;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    .container {
+        margin-top: 1.5rem;
+        border-top: 1px solid $base-color;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
 
     ul.social {
         margin-bottom: 0.8rem;
@@ -104,12 +98,14 @@ $main-nav-link-color-active: $base-color;
     }
 
     @include media-breakpoint-up(md) {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+
         ul.social li {
             margin-left: 0.8rem;
-
-            a i.fa {
-                font-size: 1.5rem;
-            }
         }
 
         nav.footer-nav {
