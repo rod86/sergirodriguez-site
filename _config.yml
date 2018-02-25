@@ -6,9 +6,13 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
-github_username:  rod86
+github_username:
 
 permalink: pretty
+
+social:
+    linkedin: http://es.linkedin.com/in/sergirodriguez86
+    github: https://github.com/rod86
 
 # Build settings
 source: _src
@@ -37,6 +41,22 @@ keep_files:
   - css
   - fonts
 
+# Frontmatter defaults
+defaults:
+    - scope:
+        path: ""
+        type: "pages"
+      values:
+          layout: "page"
+          # layout two_columns_image
+          image: ""
+
+    - scope:
+        path: ""
+        type: "projects"
+      values:
+          layout: "project"
+
 # Collections
 collections:
     projects:
@@ -44,19 +64,6 @@ collections:
         collections_dir: _projects
         permalink: /portfolio/project/:title/
         layout: project
-
-# Frontmatter defaults
-defaults:
-    - scope:
-        path: ""
-        type: pages
-      values:
-          layout: page
-    - scope:
-        path: ""
-        type: projects
-      values:
-          layout: project
 
 # Portfolio config
 portfolio:

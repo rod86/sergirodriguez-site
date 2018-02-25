@@ -6,6 +6,7 @@ section.project {
     .project-images {
         @include make-col-ready;
         @include make-col(12);
+        margin-bottom: 1rem;
 
         @include media-breakpoint-up(md) {
             @include make-col(6);
@@ -18,7 +19,11 @@ section.project {
         .project-date,
         .project-company {
             @include make-col-ready;
-            @include make-col(6);
+            @include make-col(12);
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
         }
         .project-date {
             font-weight: bold;

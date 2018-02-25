@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "npm-run-all --parallel watch:*",
     "watch:assets": "gulp",
-    "watch:jekyll": "jekyll serve --watch",
+    "watch:jekyll": "jekyll serve --host 0.0.0.0 --watch",
     "build": "npm-run-all build:*",
     "build:assets": "gulp build",
     "build:jekyll": "JEKYLL_ENV=production jekyll build"

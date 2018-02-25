@@ -38,6 +38,13 @@
         }
     }
 
+    @include media-breakpoint-down(sm) {
+        .card {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
     @include media-breakpoint-up(md) {
         .card {
             max-width: calc(50% - #{$grid-gutter-width});

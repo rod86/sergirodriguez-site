@@ -1,0 +1,30 @@
+.two-columns-image {
+    @include make-row;
+
+    .col-content, .col-image {
+        @include make-col-ready;
+        @include make-col(12);
+    }
+    .col-content {
+        @include media-breakpoint-up(md) {
+            @include make-col(9);
+            order: 1;
+        }
+    }
+    .col-image {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-up(md) {
+            @include make-col(3);
+            order: 12;
+            text-align: right;
+            margin-bottom: 0;
+        }
+
+        img {
+            @include box-shadow;
+            @include img-fluid;
+        }
+    }
+}

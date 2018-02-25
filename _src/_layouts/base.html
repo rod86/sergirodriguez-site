@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="en">
-    {% include header.html -%}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="X-UA-Compatible" content="ie=edge">
+        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+        <link rel="stylesheet" href="/css/main.min.css">
+    </head>
     <body>
         <div class="container">
-            <header id="header">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="#">
-                        <img src="/assets/images/logo.png" alt="Sergi Rodriguez">
-                    </a>
-                    {% include main_menu.html -%}
-                </nav>
-            </header>
+            {%- include header.html -%}
 
             {%- if page.title %}
                 <section id="page-header">
