@@ -2,9 +2,7 @@
 title: African Bond Markets
 date: 2013-12-01
 company: Liquid Light
-image:
-    src: afmi.jpg
-    thumbnail: afmi_small.jpg
+image: afmi.jpg
 project_url: http://www.africanbondmarkets.org/
 tags: ['Typo3', 'Frontend']
 featured: true

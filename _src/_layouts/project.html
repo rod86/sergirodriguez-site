@@ -20,9 +20,19 @@ layout: base
             {{ content }}
         </div>
     </div>
-    <div class="project-images">
-        {% if page.image.src %}
-            <img src="{{ site.portfolio.images_dir }}{{ page.image.src}}" alt="{{ page.title }}">
+    <div class="project-media">
+        {% if page.slider %}
+            <div class="bxslider">
+                {% for slide in page.slider %}
+                <div class="bxslider-slide">
+                    <img src="{{ site.portfolio.images_dir }}{{ slide.image}}" title="{{ slide.text }}" />
+                </div>
+                {% endfor %}
+            </div>
+        {% else if page.image %}
+            <div class="project-images">
+                <img src="{{ site.portfolio.images_dir }}{{ page.image}}" alt="{{ page.title }}" />
+            </div>
         {% endif %}
     </div>
     <div class="project-buttons">

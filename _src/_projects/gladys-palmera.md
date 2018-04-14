@@ -2,9 +2,7 @@
 title: Gladys Palmera
 date: 2011-03-01
 company: Opus5
-image:
-    src: gladys.jpg
-    thumbnail: gladys_small.jpg
+image: gladys.jpg
 tags: ['Zend Framework']
 ---
 

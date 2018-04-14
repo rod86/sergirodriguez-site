@@ -2,9 +2,7 @@
 title: Buro Happold
 date: 2013-10-01
 company: Liquid Light
-image:
-    src: buro.jpg
-    thumbnail: buro_small.jpg
+image: buro.jpg
 project_url: http://www.burohappold.com/
 tags: ['Typo3', 'Frontend']
 ---

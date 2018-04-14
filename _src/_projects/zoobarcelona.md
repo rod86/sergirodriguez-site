@@ -2,9 +2,7 @@
 title: Zoobarcelona
 date: 2010-07-01
 company: Opus5
-image:
-    src: zoobarcelona.jpg
-    thumbnail: zoobarcelona_small.jpg
+image: zoobarcelona.jpg
 project_url: http://www.zoobarcelona.cat/
 tags: ['Typo3']
 featured: true

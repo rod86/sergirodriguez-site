@@ -3,8 +3,8 @@
     <div class="card-deck">
         {% for project in include.projects %}
             <div class="card">
-                {% if project.image.src -%}
-                    <img src="{{ site.portfolio.images_dir }}{{ project.image.src }}" alt="{{ project.title }}" class="card-img-top">
+                {% if project.image -%}
+                    <img src="{{ site.portfolio.images_dir }}{{ project.image }}" alt="{{ project.title }}" class="card-img-top">
                 {%- endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>

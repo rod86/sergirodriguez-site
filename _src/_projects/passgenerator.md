@@ -1,9 +1,7 @@
 ---
 title: PassGenerator
 date: 2011-07-01
-image:
-    src: passgenerator.jpg
-    thumbnail: passgenerator_small.jpg
+image: passgenerator.jpg
 tags: ['Android']
 ---
 

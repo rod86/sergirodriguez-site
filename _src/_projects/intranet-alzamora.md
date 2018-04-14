@@ -2,9 +2,7 @@
 title: Intranet Alzamora
 date: 2010-12-01
 company: Opus5
-image:
-    src: alzamora.jpg
-    thumbnail: alzamora_small.jpg
+image: alzamora.jpg
 tags: ['Typo3', 'Frontend']
 featured: true
 ---

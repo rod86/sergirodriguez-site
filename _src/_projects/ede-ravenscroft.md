@@ -2,9 +2,7 @@
 title: Ede & Ravenscroft
 date: 2013-12-01
 company: Liquid Light
-image:
-    src: ede.jpg
-    thumbnail: ede_small.jpg
+image: ede.jpg
 project_url: http://www.edeandravenscroft.com/
 tags: ['Typo3', 'Frontend']
 ---

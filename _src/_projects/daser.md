@@ -1,9 +1,7 @@
 ---
 title: Daser
 date: 2010-03-01
-image:
-    src: daser.jpg
-    thumbnail: daser_small.jpg
+image: daser.jpg
 project_url: http://www.daserbcn.com/
 tags: ['Frontend']
 ---

@@ -1,9 +1,7 @@
 ---
 title: MyFeeds
 date: 2012-03-01
-image:
-    src: myfeeds.jpg
-    thumbnail: myfeeds_small.jpg
+image: myfeeds.jpg
 tags: ['Android']
 featured: true
 ---

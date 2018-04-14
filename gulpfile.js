@@ -11,6 +11,9 @@ var srcPath = './_assets',
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ],
+    fontFiles = [
+        'node_modules/font-awesome/fonts/*'
     ];
 
 // Styles
@@ -33,7 +36,7 @@ gulp.task('js', function () {
 
 // Fonts
 gulp.task('fonts', function() {
-    return gulp.src('node_modules/font-awesome/fonts/*')
+    return gulp.src(fontFiles)
         .pipe(gulp.dest(buildPath + '/fonts'));
 });
 
