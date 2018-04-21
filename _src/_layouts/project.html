@@ -22,12 +22,34 @@ layout: base
     </div>
     <div class="project-media">
         {% if page.slider %}
-            <div class="bxslider">
-                {% for slide in page.slider %}
-                <div class="bxslider-slide">
-                    <img src="{{ site.portfolio.images_dir }}{{ slide.image}}" title="{{ slide.text }}" />
+            {% assign numSlides = 0 %}
+            <div class="glide mx-auto">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        {% for slide in page.slider %}
+                            <li class="glide__slide">
+                                <img src="{{ site.portfolio.images_dir }}{{ slide.image}}" alt="{{ slide.text }}" />
+                            </li>
+                            {% assign numSlides = numSlides | plus: 1 %}
+                        {% endfor %}
+                    </ul>
                 </div>
-                {% endfor %}
+                <div class="glide__arrows" data-glide-el="controls">
+                    <a href="#" class="glide__arrow glide__arrow--prev" data-glide-dir="<">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="glide__arrow glide__arrow--next" data-glide-dir=">">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    {% for i in (0..numSlides) %}
+                        {%- if i >= numSlides -%}
+                            {% break %}
+                        {%- endif -%}
+                        <a class="glide__bullet" data-glide-dir="={{ i }}"></a>
+                    {% endfor %}
+                </div>
             </div>
         {% else if page.image %}
             <div class="project-images">

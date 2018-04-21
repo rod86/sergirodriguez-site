@@ -1,17 +1,18 @@
 ---
 title: MC Blueprints
 date: 2015-07-01
-project_url: http://www.africanbondmarkets.org/
 image: mcblueprints/home.png
 slider:
     - image: mcblueprints/home.png
-      text: Home page
+      text: Blueprints list
     - image: mcblueprints/detail.png
       text: Blueprint detail view
     - image: mcblueprints/signup.png
       text: User signup form
     - image: mcblueprints/profile.png
-      text: User profile form
+      text: User profile form in admin section
+    - image: mcblueprints/blueprints_list.png
+      text: User blueprints list in admin section
 
 tags: ['NodeJS', 'AngularJS', 'MongoDB', 'Express']
 ---

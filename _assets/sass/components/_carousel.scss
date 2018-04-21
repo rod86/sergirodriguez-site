@@ -1,0 +1,54 @@
+
+.glide {
+    width: 100%;
+
+    .glide__slide {
+        position: relative;
+
+        img {
+            @include box-shadow;
+            @include img-fluid;
+        }
+    }
+    .glide__arrows {
+        .glide__arrow {
+            color: $base-color;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            text-shadow: none;
+            font-size: 2.5em;
+            @include transition(color $transition-delay $transition-transition);
+
+            &:hover {
+                color: lighten($base-color, 20%);
+            }
+            &.glide__arrow--prev {
+                left: 10px;
+            }
+            &.glide__arrow--next {
+                right: 15px;
+            }
+        }
+    }
+    .glide__bullets {
+        bottom: -1.5em;
+
+        .glide__bullet {
+            width: $carousel-pagination-bullets-spacing;
+            height: $carousel-pagination-bullets-spacing;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.2);
+            box-shadow: none;
+            margin: 0 0.35em;
+
+            &:hover, &:focus {
+                border: none;
+            }
+            &.glide__bullet--active {
+                background-color: $base-color;
+            }
+        }
+    }    
+}

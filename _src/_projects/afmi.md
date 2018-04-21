@@ -4,7 +4,7 @@ date: 2013-12-01
 company: Liquid Light
 image: afmi.jpg
 project_url: http://www.africanbondmarkets.org/
-tags: ['Typo3', 'Frontend']
+tags: ['Typo3', 'HTML', 'CSS', 'Javascript']
 featured: true
 ---
 

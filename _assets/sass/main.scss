@@ -6,7 +6,8 @@
 // Vendors
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/font-awesome/scss/font-awesome";
-// @import "node_modules/bxslider/dist/jquery.bxslider.min";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss";
 
 // Generic
 @import "_mixins";
@@ -15,7 +16,7 @@
 
 // Components
 @import "components/_projects_list";
-// @import "components/_carousel";
+@import "components/_carousel";
 
 // Pages
 @import "pages/_home";

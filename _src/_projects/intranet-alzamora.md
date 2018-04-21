@@ -3,7 +3,7 @@ title: Intranet Alzamora
 date: 2010-12-01
 company: Opus5
 image: alzamora.jpg
-tags: ['Typo3', 'Frontend']
+tags: ['Typo3', 'HTML', 'CSS', 'Javascript']
 featured: true
 ---
 
