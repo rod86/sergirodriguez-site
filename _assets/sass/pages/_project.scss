@@ -1,101 +1,79 @@
 
 section.project {
-    @include make-row;
-
-    .project-details,
-    .project-media {
-        @include make-col-ready;
-        @include make-col(12);
-        margin-bottom: 1rem;
-
-        @include media-breakpoint-up(lg) {
-            @include make-col(6);
-        }
-    }
-
-    .project-info {
-        @include make-row;
-
-        .project-date,
-        .project-company {
-            @include make-col-ready;
-            @include make-col(12);
-
-            @include media-breakpoint-up(lg) {
-                @include make-col(6);
-            }
-        }
+    .project-details {
         .project-date {
+            color: $secondary;
             font-weight: bold;
             text-transform: uppercase;
+            margin-bottom: .1em;
         }
         .project-company {
-            color: $text-muted;
+            color: $secondary;
             font-style: italic;
         }
-    }
+        .content {
+            margin: 1rem 0;
 
-    .project-content {
-        margin: 1rem 0;
-    }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 2em;
+            }
+        }
+        .project-tags {
+            margin: 2em 0;
 
-    .project-images {
-        text-align: center;
-        img {
-            @include box-shadow;
-            @include img-fluid;
+            .title {
+                font-weight: bold;
+                font-size: 90%;
+                color: $base-color;
+                margin-bottom: .3em;
+            }
+        }
+    }
+    .project-media {
+        margin-bottom: 2.5em;
+
+        .project-image {
+            text-align: center;
+            
+            img {
+                @include mixin-box-shadow;
+                @include img-fluid;
+            }
+            @include media-breakpoint-up(md) {
+                text-align: right;
+            }
+        }
+        .glide {
+            @include carousel($carousel-max-width, $carousel-max-height);
+            @include carousel-breakpoint(xs, $carousel-max-xs-width, $carousel-max-xs-height);
+            @include carousel-manual-breakpoint(992px, 1200px, $carousel-max-width - 10px, $carousel-max-height - 10px);
         }
 
-        @include media-breakpoint-up(md) {
-            text-align: right;
-        }
-    }
-
-    .project-media .glide {
-        @include carousel($carousel-max-width, $carousel-max-height);
-        @include carousel-breakpoint(xs, $carousel-max-xs-width, $carousel-max-xs-height);
-        @include carousel-manual-breakpoint(992px, 1200px, $carousel-max-width - 10px, $carousel-max-height - 10px);
-        
         @include media-breakpoint-up(lg) {
-            float: right;
+            margin-bottom: 3.5em;
+
+            .glide {
+                float: right;
+            }
         }
     }
 
     .project-buttons {
-        @include make-col-ready;
-        @include make-col(12);
-        margin: 2rem 0;
+        i.fa-external-link {
+            vertical-align: middle;
+        }
 
-        .project-buttons-group {
-            @include make-row;
-
-            & > div {
-                margin-top: .8rem;
-                &:first-child {
-                    margin-top: 0;
-                }
+        @include media-breakpoint-down(md) {
+            .project-button-back {
+                margin-top: 1em;
             }
-
-            .back, .project-url {
-                @include make-col-ready;
-                @include make-col(12);
-                text-align: center;
+            .project-buttons-group > .row > div {
+                margin-top: .8em;
             }
-
-            @include media-breakpoint-up(md) {
-                & > div {
-                    margin-top: 0;
-                }
-
-                .back {
-                    @include make-col(4);
-                    text-align: left;
-                    order: 1;
-                }
-                .project-url {
-                    @include make-col(4);
-                    order: 2;
-                }
+        }
+        @include media-breakpoint-down(xs) {
+            .project-buttons-group > .row > div {
+                width: 90%;
             }
         }
     }

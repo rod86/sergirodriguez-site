@@ -5,7 +5,7 @@
     min-height: $overlay-height;
     position: relative;
     margin-bottom: 2rem;
-    @include box-shadow;
+    @include mixin-box-shadow;
 
     .overlay {
         background-color: $overlay-background-color;

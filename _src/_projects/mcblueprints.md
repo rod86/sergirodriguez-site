@@ -14,12 +14,11 @@ slider:
     - image: mcblueprints/blueprints_list.png
       text: User blueprints list in admin section
 
+github_url: https://github.com/rod86/mcblueprints
+
 tags: ['NodeJS', 'AngularJS', 'MongoDB', 'Express']
 ---
 
 I built an application to manage and share Minecraft structures.
 
 I used the MEAN stack (MongoDB, Express, AngularJS 1.x, NodeJs).
-
-
-View code: https://github.com/rod86/mcblueprints

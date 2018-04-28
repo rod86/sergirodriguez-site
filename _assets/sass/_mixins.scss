@@ -7,12 +7,26 @@
     transition: $args;
 }
 
-@mixin box-shadow() {
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin mixin-box-shadow() {
     -webkit-box-shadow: $box-shadow-horizontal-offset $box-shadow-vertical-offset $box-shadow-blur $box-shadow-color;
     -moz-box-shadow: $box-shadow-horizontal-offset $box-shadow-vertical-offset $box-shadow-blur $box-shadow-color;
     box-shadow: $box-shadow-horizontal-offset $box-shadow-vertical-offset $box-shadow-blur $box-shadow-color;
 }
 
+/** BOOTSTRAP */
+
+@mixin bootstrap-btn() {
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+}
 
 /** CAROUSEL **/
 
@@ -31,7 +45,7 @@
 
 @mixin carousel-width($max-width, $max-height) {
     max-width: $max-width + $box-shadow-vertical-offset;
-    max-height: $max-height + $box-shadow-horizontal-offset ;
+    max-height: $max-height + $box-shadow-horizontal-offset;
 
     .glide__slide {
         img {

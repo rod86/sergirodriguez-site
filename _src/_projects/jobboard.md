@@ -14,10 +14,9 @@ slider:
     - image: jobboard/company_profile_form.png
       text: Company's profile form in admin section
 
+github_url: https://github.com/rod86/jobboard
+
 tags: ['Laravel', 'Bootstrap']
 ---
 
 Basic job board built with Laravel 5.2
-
-
-View code: https://github.com/rod86/jobboard

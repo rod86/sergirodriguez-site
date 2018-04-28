@@ -16,10 +16,11 @@ slider:
     - image: symfony-forum/user_panel_topics.png
       text: User's posts list in admin section
 
+
+project_url: http://aaa
+github_url: https://github.com/rod86/symfony-forum
+
 tags: ['Symfony', 'Bulma']
 ---
 
 Forum built with Symfony 3.
-
-
-View code: https://github.com/rod86/symfony-forum

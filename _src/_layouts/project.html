@@ -3,70 +3,93 @@ layout: base
 ---
 
 <section class="project">
-    <div class="project-details">
-        <div class="project-info">
+    <div class="row">
+        <div class="col-lg-6 project-details">
             <div class="project-date">
                 <time datetime="{{ page.date|date:"%Y-%m-%d" }}">
                     {{- page.date|date:"%B %Y" -}}
                 </time>
             </div>
-            <div class="project-company">
-                {% if page.company %}
+            {% if page.company %}
+                <div class="project-company">
                     Working at {{ page.company }}
-                {% endif %}
+                </div>
+            {% endif %}
+            <div class="content">
+                {{ content }}
             </div>
-        </div>
-        <div class="project-content content">
-            {{ content }}
-        </div>
-    </div>
-    <div class="project-media">
-        {% if page.slider %}
-            {% assign numSlides = 0 %}
-            <div class="glide mx-auto">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        {% for slide in page.slider %}
-                            <li class="glide__slide">
-                                <img src="{{ site.portfolio.images_dir }}{{ slide.image}}" alt="{{ slide.text }}" />
-                            </li>
-                            {% assign numSlides = numSlides | plus: 1 %}
+
+            {% assign countTags = page.tags|size %}
+            {% if countTags > 0 %}
+                <div class="project-tags">
+                    <div class="title">TECHNOLOGIES</div>
+                    <div class="badge-group">
+                        {% for tag in page.tags %}
+                            <span class="badge badge-primary badge-outlined font-weight-normal badge-lg">{{ tag }}</span>
                         {% endfor %}
-                    </ul>
+                    </div>
                 </div>
-                <div class="glide__arrows" data-glide-el="controls">
-                    <a href="#" class="glide__arrow glide__arrow--prev" data-glide-dir="<">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    </a>
-                    <a href="#" class="glide__arrow glide__arrow--next" data-glide-dir=">">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
+            {% endif %}
+        </div>  
+        <div class="col-lg-6 project-media">
+            {% if page.slider %}
+                {% assign numSlides = 0 %}
+                <div class="glide mx-auto">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            {% for slide in page.slider %}
+                                <li class="glide__slide">
+                                    <img src="{{ site.portfolio.images_dir }}{{ slide.image}}" alt="{{ slide.text }}" />
+                                </li>
+                                {% assign numSlides = numSlides | plus: 1 %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <a href="#" class="glide__arrow glide__arrow--prev" data-glide-dir="<">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="glide__arrow glide__arrow--next" data-glide-dir=">">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        {% for i in (0..numSlides) %}
+                            {%- if i >= numSlides -%}
+                                {% break %}
+                            {%- endif -%}
+                            <a class="glide__bullet" data-glide-dir="={{ i }}"></a>
+                        {% endfor %}
+                    </div>
                 </div>
-                <div class="glide__bullets" data-glide-el="controls[nav]">
-                    {% for i in (0..numSlides) %}
-                        {%- if i >= numSlides -%}
-                            {% break %}
-                        {%- endif -%}
-                        <a class="glide__bullet" data-glide-dir="={{ i }}"></a>
-                    {% endfor %}
+            {% else if page.image %}
+                <div class="project-image">
+                    <img src="{{ site.portfolio.images_dir }}{{ page.image}}" alt="{{ page.title }}" />
                 </div>
-            </div>
-        {% else if page.image %}
-            <div class="project-images">
-                <img src="{{ site.portfolio.images_dir }}{{ page.image}}" alt="{{ page.title }}" />
-            </div>
-        {% endif %}
+            {% endif %}
+        </div>    
     </div>
-    <div class="project-buttons">
-        <div class="project-buttons-group">
-            <div class="project-url">
+    <div class="row project-buttons">
+        <div class="col-lg-5 offset-lg-2 order-lg-2 project-buttons-group">
+            <div class="row d-flex justify-content-center">
                 {% if page.project_url %}
-                    <a href="{{ page.project_url }}" class="btn btn-primary btn-lg" role="button" target="_blank">Visit site</a>
+                <div class="col-xs-12 col-sm-6">
+                    <a class="btn btn-primary btn-block btn-extra-padding" href="{{ page.project_url }}" target="_blank" role="button">
+                        <i class="fa fa-external-link"></i> Site
+                    </a>
+                </div>
+                {% endif %}
+                {% if page.github_url %}
+                <div class="col-xs-12 col-sm-6">
+                    <a class="btn btn-github btn-block btn-extra-padding" href="{{ page.github_url }}" target="_blank" role="button">
+                        <i class="fa fa-github"></i> Github
+                    </a>
+                </div>
                 {% endif %}
             </div>
-            <div class="back">
-                <a class="btn btn-link" href="/portfolio" role="button">Back to portfolio</a>
-            </div>
+        </div>
+        <div class="col-xs-8 col-lg-2 order-lg-1 project-button-back">
+            <a class="btn btn-link btn-block btn-extra-padding" href="/portfolio" role="button">Back to portfolio</a>
         </div>
     </div>
 </section>
