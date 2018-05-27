@@ -35,7 +35,7 @@ gulp.task('clean:fonts', function() {
 gulp.task('sass', ['clean:css'], function() {
     gulp.src(srcPath + '/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        // .pipe(cssMin())
+        .pipe(cssMin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(buildPath + '/css'));
 });
