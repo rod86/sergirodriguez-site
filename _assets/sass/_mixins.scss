@@ -7,8 +7,61 @@
     transition: $args;
 }
 
-@mixin box-shadow() {
-    -webkit-box-shadow: $box-shadow;
-    -moz-box-shadow: $box-shadow;
-    box-shadow: $box-shadow;
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin mixin-box-shadow() {
+    -webkit-box-shadow: $box-shadow-horizontal-offset $box-shadow-vertical-offset $box-shadow-blur $box-shadow-color;
+    -moz-box-shadow: $box-shadow-horizontal-offset $box-shadow-vertical-offset $box-shadow-blur $box-shadow-color;
+    box-shadow: $box-shadow-horizontal-offset $box-shadow-vertical-offset $box-shadow-blur $box-shadow-color;
+}
+
+/** BOOTSTRAP */
+
+@mixin bootstrap-btn() {
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+}
+
+/** CAROUSEL **/
+
+@mixin carousel($max-width: $carousel-max-width, $max-height: $carousel-max-height) {
+    max-width: $max-width + $box-shadow-vertical-offset + $carousel-shadow-extra-spacing;
+    max-height: $max-height + $box-shadow-horizontal-offset + $carousel-shadow-extra-spacing;
+    
+    .glide__slide {
+        height: $max-height + $box-shadow-horizontal-offset + $carousel-shadow-extra-spacing;
+
+        .slide-text {
+            max-width: $max-width;
+        }
+    }
+}
+
+@mixin carousel-width($max-width, $max-height) {
+    max-width: $max-width + $box-shadow-vertical-offset;
+    max-height: $max-height + $box-shadow-horizontal-offset;
+
+    .glide__slide {
+        img {
+            width: $max-width - $box-shadow-vertical-offset;
+        }
+    }
+}
+
+@mixin carousel-manual-breakpoint($breakpoint-min-width, $breakpoint-max-width, $max-width, $max-height) {
+    @media only screen and (min-width: $breakpoint-min-width) and (max-width: $breakpoint-max-width) {
+        @include carousel-width($max-width, $max-height);
+    }
+}
+
+@mixin carousel-breakpoint($breakpoint, $max-width, $max-height) {
+    @include media-breakpoint-only($breakpoint) {
+        @include carousel-width($max-width, $max-height);
+    }
 }

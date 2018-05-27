@@ -2,9 +2,7 @@
 title: KDF
 date: 2012-11-01
 company: Opus5
-image:
-    src: kdf.jpg
-    thumbnail: kdf_small.jpg
+image: kdf.jpg
 project_url: http://www.kdf.es/
 tags: ['Wordpress']
 ---

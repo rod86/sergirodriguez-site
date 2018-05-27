@@ -23,7 +23,7 @@
         }
 
         img {
-            @include box-shadow;
+            @include mixin-box-shadow;
             @include img-fluid;
         }
     }

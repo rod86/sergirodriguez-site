@@ -2,7 +2,7 @@
 
 .projects-list {
     .card {
-        @include box-shadow;
+        @include mixin-box-shadow;
         border: none;
         margin-bottom: $grid-gutter-width;
 
@@ -19,6 +19,7 @@
                 .project-company, .project-date {
                     display: block;
                     font-size: 0.9rem;
+                    color: $secondary;
                 }
                 .project-date {
                     font-weight: bold;
@@ -47,13 +48,13 @@
 
     @include media-breakpoint-up(md) {
         .card {
-            max-width: calc(50% - #{$grid-gutter-width});
+            @include calc(max-width, '50% - #{$grid-gutter-width}');
         }
     }
 
     @include media-breakpoint-up(xl) {
         .card {
-            max-width: calc(25% - #{$grid-gutter-width});
+            @include calc(max-width, '25% - #{$grid-gutter-width}');
         }
     }
 }

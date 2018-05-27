@@ -10,8 +10,11 @@ $body-background-image: "/assets/images/bg-chruch.png";
 $transition-transition: ease-in-out;
 $transition-delay: .3s;
 
-// shadow
-$box-shadow: 5px 5px 5px #888888;
+// box shadow
+$box-shadow-horizontal-offset: 5px;
+$box-shadow-vertical-offset: 5px;
+$box-shadow-blur: 5px;
+$box-shadow-color: #888888;
 
 // Main menu
 $main-nav-font-family: 'BebasNeueRegular', Arial, sans-serif;
@@ -26,6 +29,15 @@ $overlay-background-color: rgba(0,0,0,0.7);
 $overlay-button-color-hover: darken(#f8f9fa, 10%);
 $overlay-background-image: '/assets/images/royal_pavillion.jpg';
 $overlay-height: 300px;
+
+// carousel
+$carousel-max-width: 453px;
+$carousel-max-height: 274px;
+$carousel-max-xs-width: 353px;
+$carousel-max-xs-height: 214px;
+$carousel-pagination-bullets-size: 10px;
+$carousel-pagination-bullets-spacing: 10px;
+$carousel-shadow-extra-spacing: 2px;
 
 
 /*** BOOTSTRAP ***/

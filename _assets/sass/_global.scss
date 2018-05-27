@@ -17,10 +17,58 @@ a {
             content: $fa-var-stop;
             font-family: 'FontAwesome';
             float: left;
-            margin-left: -1.5em;
+            margin-left: -1.7em;
             color: $base-color;
-            font-size: .8rem;
-            padding-top: .2rem;
+            font-size: .6rem;
+            padding-top: .35rem;
         }
+    }
+}
+
+
+
+// Buttons
+@each $color, $value in $theme-colors {
+    .btn-#{$color}, .btn-outline-#{$color} {
+       @include bootstrap-btn;
+    }
+}
+
+.btn-extra-padding {
+    padding: 0.5rem 1rem;
+}
+
+// Custom Buttons
+.btn-email {
+    @include button-variant(#ea4335, #ea4335);
+    @include bootstrap-btn;
+}
+.btn-linkedin {
+    @include button-variant(#0077B5, #0077B5);
+    @include bootstrap-btn;
+}
+.btn-github {
+    @include button-variant(#333, #333);
+    @include bootstrap-btn;
+}
+
+// badges
+.badge {
+    &.badge-outlined {
+        border-width: 1px;
+        border-style: solid;
+        border-color: $base-color;
+        color: $base-color;
+        background-color: transparent;
+    }
+    &.badge-lg {
+        font-size: 85%;
+        padding: 0.5em 0.7em 0.4em;
+    }
+}
+
+.badge-group {
+    .badge {
+        margin: 0.4em 0.2em;
     }
 }

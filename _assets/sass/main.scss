@@ -1,23 +1,26 @@
 
+// Setup
 @import "_fonts";
 @import "_variables";
+
+// Vendors
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss";
 
+// Generic
 @import "_mixins";
 @import "_global";
 @import "_layout";
-@import "components/_projects_list";
 
+// Components
+@import "components/_projects_list";
+@import "components/_carousel";
+
+// Pages
+@import "pages/_home";
 @import "pages/_project";
 @import "pages/_two_columns_image";
 
-@import "_home";
 
-// _mixins
-// _responsive
-// _global
-
-// _components
-// _layout
-// _pages_X

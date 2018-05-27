@@ -2,9 +2,7 @@
 title: Mundoyoga
 date: 2010-11-01
 company: Opus5
-image:
-    src: mundoyoga.jpg
-    thumbnail: mundoyoga_small.jpg
+image: mundoyoga.jpg
 project_url: http://www.mundoyoga.com/
 tags: ['Magento']
 ---

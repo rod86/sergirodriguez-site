@@ -37,9 +37,9 @@ exclude:
 
 # do not delete files in _site folder
 keep_files:
-  - js
-  - css
-  - fonts
+  - assets/js
+  - assets/css
+  - assets/fonts
 
 # Frontmatter defaults
 defaults:
