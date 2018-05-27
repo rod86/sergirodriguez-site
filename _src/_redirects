@@ -1,0 +1,4 @@
+# Netlify redirects
+
+# Redirect default Netlify subdomain to primary domain
+http://sergirodriguez.netlify.com/* http://www.sergirodriguez.net/:splat 301!

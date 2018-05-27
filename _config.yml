@@ -35,6 +35,10 @@ exclude:
   - gulpfile.js
   - .DS_Store
 
+# include in processing
+include:
+  - _redirects
+
 # do not delete files in _site folder
 keep_files:
   - assets/js
